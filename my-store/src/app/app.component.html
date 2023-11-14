@@ -1,3 +1,21 @@
+<h1>*ngIf</h1>
+<input type="text" required [(ngModel)]="person.name"/>
+<p *ngIf="person.name == 'Alejandro'">Soy Alejandro</p>
+<p *ngIf="person.name == 'Alejandro22'">Soy Alejandro22</p>
+
+<hr>
+
+<h1>NgModel</h1>
+<p>Nombre: {{person.name}}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
+<p>Valid: {{nameInput.valid}}</p>
+
+<p>Edad: {{person.age}}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age"/>
+<p>Valid: {{ageInput.valid}}</p>
+
+<hr>
+
 <h1>Eventos</h1>
 <button [disabled]="btnDisabled">Enviar</button>
 <button (click)="toggleButton()">Toogle Button</button>
