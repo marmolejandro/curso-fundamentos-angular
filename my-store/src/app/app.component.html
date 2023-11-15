@@ -1,5 +1,16 @@
+<h1>ngSwitch</h1>
+<input type="text" required [(ngModel)]="person.name"/>
+<div [ngSwitch]="person.name">
+  <p  *ngSwitchCase="'Alejo'">La persona es Alejandro</p>
+  <p  *ngSwitchCase="'Alejandro'">La persona es Alejandro</p>
+  <p  *ngSwitchCase="'Andres'">La persona es Andres</p>
+  <p  *ngSwitchDefault>No hace match</p>
+</div>
+
+<hr>
+
 <h1>*ngFor Objetos</h1>
-<div>
+<div class="products-grid">
   <div *ngFor="let product of products">
     <img [src]="product.image" alt="image" width="100">
     <h2>{{product.price}}</h2>
