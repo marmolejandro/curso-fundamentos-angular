@@ -20,6 +20,15 @@ export class AppComponent {
     age: 17,
     avatar: 'https://source.unsplash.com/random'
   }
+  names: string[] = ['Alejo', 'Andres', 'Victor', 'Luz'];
+  newName = '';
+  products = [
+    {name: 'El mejor juguete', price: 565, image: 'https://source.unsplash.com/random'},
+    {name: 'El mejor juguete2', price: 566, image: 'https://source.unsplash.com/random'},
+    {name: 'El mejor juguete3', price: 567, image: 'https://source.unsplash.com/random'},
+    {name: 'El mejor juguete4', price: 568, image: 'https://source.unsplash.com/random'},
+    {name: 'El mejor juguete5', price: 569, image: 'https://source.unsplash.com/random'}
+  ];
 
   toggleButton(){
     this.btnDisabled = !this.btnDisabled;
@@ -37,5 +46,14 @@ export class AppComponent {
   changeName(event: Event){
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+
+  addName(){
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+
+  deleteName(index: number){
+    this.names.splice(index, 1);
   }
 }
