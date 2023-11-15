@@ -12,6 +12,7 @@ import { Product } from './product.model'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10;
   name = 'Alejandro';
   age = 18;
   img = 'https://source.unsplash.com/random';
@@ -22,12 +23,23 @@ export class AppComponent {
     avatar: 'https://source.unsplash.com/random'
   }
   names: string[] = ['Alejo', 'Andres', 'Victor', 'Luz'];
+
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  }
+
   newName = '';
   products: Product[] = [
     {name: 'El mejor juguete', price: 565, image: 'https://source.unsplash.com/random'},
     {name: 'El mejor juguete2', price: 566, image: 'https://source.unsplash.com/random'},
     {name: 'El mejor juguete3', price: 567, image: 'https://source.unsplash.com/random'},
     {name: 'El mejor juguete4', price: 568, image: 'https://source.unsplash.com/random'},
+    {name: 'El mejor juguete5', price: 569, image: 'https://source.unsplash.com/random'},
+    {name: 'El mejor juguete5', price: 569, image: 'https://source.unsplash.com/random'},
+    {name: 'El mejor juguete5', price: 569, image: 'https://source.unsplash.com/random'},
+    {name: 'El mejor juguete5', price: 569, image: 'https://source.unsplash.com/random'},
     {name: 'El mejor juguete5', price: 569, image: 'https://source.unsplash.com/random'}
   ];
 
