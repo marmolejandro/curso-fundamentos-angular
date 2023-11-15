@@ -1,5 +1,5 @@
 <h1>Formulario</h1>
-<form (submit)="onRegister()" #myForm="ngForm">
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
   <div class="input-group">
     <label for="name">Nombre</label>
     <input required type="text" name="name" id="name" [(ngModel)]="register.name"/>
