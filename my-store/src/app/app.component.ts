@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms'
+import { Product } from './product.model'
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,7 @@ export class AppComponent {
   }
   names: string[] = ['Alejo', 'Andres', 'Victor', 'Luz'];
   newName = '';
-  products = [
+  products: Product[] = [
     {name: 'El mejor juguete', price: 565, image: 'https://source.unsplash.com/random'},
     {name: 'El mejor juguete2', price: 566, image: 'https://source.unsplash.com/random'},
     {name: 'El mejor juguete3', price: 567, image: 'https://source.unsplash.com/random'},
